@@ -1,0 +1,120 @@
+body {
+    background: black;
+}
+
+.clock {
+    position: relative;
+    text-align: center;
+    color: #e98208;
+    font-size: 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 7px;
+}
+
+.text1 {
+    position: relative;
+    text-align: center;
+    color: #e98208;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 7px;
+}
+
+.text2 {
+    position: relative;
+    text-align: center;
+    color: #e98208;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 7px;
+    margin-right: 100px;
+    margin-left: 100px;
+    
+}
+
+img {
+    margin-top: 120px;
+    width: 17%;
+
+    
+}
+
+ html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+
+
+ }
+ 
+ .wrapper{
+    height: 100px;
+    width: 360px;
+    margin: auto;
+    cursor: default;
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    border-radius: 10px;
+    animation: animate 1.5s linear infinite;
+    
+
+ }
+ .wrapper .display,
+ .wrapper span{
+     position: absolute;
+     margin: auto;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+
+ }
+
+ .wrapper .display{
+    position: absolute;
+  /*  opacity: 0; */
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    background: #1b1b1b;
+    height: 85px;
+    width: 345px;
+    border-radius: 6px;
+    text-align: center;
+
+ }
+
+
+ .wrapper .display {
+    line-height: 85px;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px; 
+    margin: auto;
+    background: linear-gradient(135deg, 14ffe9, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+    100%{
+        filter:hue-rotate(360deg);
+    }
+
+}
+
+.wrapper span{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background: inherit;
+    border-radius: 10px;
+
+}
+
+
+.wrapper span:last-child{
+    filter: blur(20px);
+
+}

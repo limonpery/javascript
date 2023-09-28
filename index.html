@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+     crossorigin="anonymous">
+
+    <title>Kodluyoruz Javascript Saat Ödevi</title>
+</head>
+<body class="bg-dark">
+    <div class="text-center" > 
+        <img src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png" 
+        alt="" class="rounded">
+        <div class="text1 text-center" >
+            "Merhaba"
+            <strong>
+                <span id="myName" ></span>
+            </strong>
+            "! Hoş Geldin!"
+        
+         </div>
+         
+
+        <div class="wrapper"> 
+            <div class="display">
+                <div id="time">12:00:00 PM</div>
+                <span></span>
+                <span></span>
+        
+            </div>
+        </div>
+          <script>
+            setInterval(()=>{
+            const time= document.querySelector("#time");
+            let date = new Date();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+            let day_night = "AM";
+            if(hours > 12){
+                day_night ="PM"
+                hourse = hourse - 12;
+            }
+            if(hours < 10){
+                 hours = "0" + hours;
+            }
+           
+            if(minutes < 10){
+                minutes = "0" + minutes;
+            }
+            if(seconds < 10){
+                seconds = "0" + seconds;
+            }
+            time.textContent = hours + ":" minutes + ":" seconds ":" + " " + day_night;
+            });
+
+
+          </script>
+
+          
+        <div id="myClock" class="clock" onload="showTime()" ></div>
+        <div class="txt2 text-center">
+            " Tarihinde 
+            <strong>Koldluyoruz Frontend web Development Patikası</strong>
+            " 'nın Javacsript bölümü 1. Ödevisindesiniz"
+
+        </div>
+        <script src="js/clock.js" ></script>
+
+
+    </div>
+    
+</body>
+</html>
